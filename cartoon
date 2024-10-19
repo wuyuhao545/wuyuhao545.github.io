@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body{
+            min-height: 100vh;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(255, 255, 255);
+            }
+        .card{
+            position: relative;
+            width :100px;
+            height: 100px;
+            perspective: 1000px;
+            margin:0 2em;
+            }
+
+        .cover,.back{
+            background-color: rgba(red, green, blue, alpha);
+            position: absolute;
+            width: 100%;
+            height:100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backface-visibility: hidden;
+            transition: all 1s ease-in-out;
+            font-size:4em;
+            border-radius: 8px;
+            box-shadow: 2px 4px 40px #999;
+        }
+
+        .cover{
+            transform: rotateY(0deg);
+        }
+
+        .back{
+            transform: rotateY(-180deg); 
+        }
+
+        .card:hover .cover{
+            transform: rotateY(180deg);
+        }
+
+        .card:hover .back{
+            transform: rotateY(0deg);
+        }
+    </style>
+</head> 
+<body>
+    <div class="card">
+        <div class="cover">😊</div>
+        <div class="back">😂</div>
+    </div>
+    <div class="card">
+        <div class="cover">😁</div>
+        <div class="back">😀</div>
+    </div>
+    <div class="card">
+        <div class="cover">😎</div>
+        <div class="back">🤗</div>
+    </div>
+</body>
+</html>
